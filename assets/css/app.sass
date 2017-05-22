@@ -2,6 +2,62 @@
 ---
 
 @import 'vars'
+@import 'fonts'
 
-body
-	background-color: $main__color-1
+header
+	z-index: 100
+	background-color: transparent
+	.top-bar
+		background-color: rgba(0,0,0, .4)
+	.nav-container
+		width: 100%
+	#top-bar-menu
+		ul
+			background-color: transparent
+			li
+				a
+					color: white
+					font-family: 'manlymen-bb'
+					font-size: 18px
+					transition: all ease-in-out .2s
+					&:hover
+						text-shadow: 2px 1px 7px #ffee00
+// side nav
+#sidenav
+	z-index: 1
+	position: absolute
+	ul
+		background-color: rgba(0,0,0,.4)
+		list-style: none
+		li
+			a
+				color: white
+				font-family: 'manlymen-bb'
+				padding: 20px
+				font-size: 15px
+				display: block
+				position: relative
+				&:after
+					background-image: url('/assets/images/sidebar-circle.png')
+					background-size: contain
+					background-repeat: no-repeat
+					background-position: center
+					height: 100%
+					content: ''
+					position: absolute
+					width: 100%
+					left: 0
+					top: 0
+#home-hero
+	position: absolute
+	top: 0
+	height: 100%
+	width: 100%
+	z-index: 0
+.full-width-image
+	width: 100%
+.full-width-background
+	background-position: center
+	background-repeat: no-repeat
+	&.contain
+		background-size: cover
