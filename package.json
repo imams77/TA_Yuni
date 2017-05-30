@@ -1,0 +1,23 @@
+{
+  "name": "ta_yuni",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imstevanno/TA_Yuni.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imstevanno/TA_Yuni/issues"
+  },
+  "homepage": "https://github.com/imstevanno/TA_Yuni#readme"
+}

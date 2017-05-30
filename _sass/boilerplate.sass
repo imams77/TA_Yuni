@@ -1,0 +1,68 @@
+h1,h2,h3,h4,h5,h6
+	font-family: 'boston-ttf'
+.middle
+	text-align: center
+
+section
+	color: white
+
+// separator
+.separator
+	height: 1px
+	margin-bottom: 100px
+
+.full-height
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+.section-text
+	display: block
+	font-family: 'manlymen-bb'
+	color: black
+	// font-size: 15px
+	display: inline-block
+	font-weight: 700
+	padding: 30px
+	background-size: contain
+	background-repeat: no-repeat
+	position: relative
+	transition: all ease-in-out .2s
+	opacity: 0
+	transform: translateY(20px)
+	&.active
+		opacity: 1
+		transform: translateY(0px)
+.section-img
+	position: relative
+	transition: all ease-in-out .3s
+	opacity: 0
+	transform: translateY(30px)
+	&.active
+		opacity: 1
+		transform: translateY(0px)
+
+.section-video
+	transition: all ease-in-out .3s
+	opacity: 0
+	transform: translateY(-20px)
+	&.active
+		opacity: 1
+		transform: translateY(0px)
+
+.section-yuni
+	position: relative
+// type js
+.typed-cursor
+	opacity: 0
+	display: none
+// scroll ke bawah
+.scroll-bottom
+	font-family: 'edosz'
+	color: #D5D5D5
+	position: absolute
+	bottom: 20px
+	span
+		font-size: 30px
+		display: block

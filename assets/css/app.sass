@@ -3,12 +3,20 @@
 
 @import 'vars'
 @import 'fonts'
+@import 'keyframes'
+@import 'boilerplate'
+
+
+body
+	background-color: black
 
 header
 	z-index: 100
 	background-color: transparent
 	.top-bar
-		background-color: rgba(0,0,0, .4)
+		// background-color: rgba(0,0,0, .4)
+		background-image: url('/assets/images/header-bg.png')
+		background-color: transparent
 	.nav-container
 		width: 100%
 	#top-bar-menu
@@ -26,6 +34,11 @@ header
 #sidenav
 	z-index: 1
 	position: absolute
+	height: 100%
+	top: 0
+	display: flex
+	align-items: center
+	right: 0
 	ul
 		background-color: rgba(0,0,0,.4)
 		list-style: none
@@ -37,6 +50,7 @@ header
 				font-size: 15px
 				display: block
 				position: relative
+				overflow: hidden
 				&:after
 					background-image: url('/assets/images/sidebar-circle.png')
 					background-size: contain
@@ -48,12 +62,28 @@ header
 					width: 100%
 					left: 0
 					top: 0
+					opacity: 0
+				&:hover
+					transition: all ease-in-out .2s
+					&:after
+						opacity: 1
+						animation: rotate ease-in-out .5s forwards
+.full-screen
+	position: absolute
+	height: 100%
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
 #home-hero
 	position: absolute
 	top: 0
 	height: 100%
 	width: 100%
 	z-index: 0
+	display: flex
+	justify-content: center
+	align-items: center
 .full-width-image
 	width: 100%
 .full-width-background
@@ -61,3 +91,90 @@ header
 	background-repeat: no-repeat
 	&.contain
 		background-size: cover
+// home
+.home-hero-content
+	text-align: center
+	#canvas
+		margin-bottom: 30px
+		background-image: url('../images/canvas-home.png')
+		width: 531px
+		height: 229px
+		background-repeat: no-repeat
+		background-position: center
+		position: relative
+		&:before
+			background-image: url('../images/home/plester-10.png')
+			width: 189px
+			height: 148px
+			content: ''
+			position: absolute
+			bottom: -21px
+			left: -70px
+		&:after
+			background-image: url('../images/home/plester-11.png')
+			width: 147px
+			height: 140px
+			content: ''
+			position: absolute
+			right: -40px
+			top: -29px
+		.text-container
+			text-align: left
+			position: absolute
+			left: 90px
+			bottom: 30px
+			h2
+				font-family: 'boston-ttf'
+				line-height: 1.1
+				font-size: 45px
+// button
+.button
+	border-radius: 8px
+	padding: 10px 30px
+	&.button-black
+		color: white
+		background-color: black
+
+
+// contact us
+#contact-container
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	// width: 100vw
+	.container
+		color: white
+		font-family: 'manlymen-bb'
+		label
+			color: white
+		.cta
+			text-align: right
+			span
+				display: block
+		h2
+			font-family: 'boston-ttf'
+		input
+			color: black!important
+		&::-webkit-input-placeholder
+			color: black
+		&::-moz-input-placeholder
+			color: black
+
+// chapter
+#chapter-choose
+	.columns
+		padding: 10px
+		text-align: center
+		color: black
+		.container
+			background-color: #DCDACE
+			padding: 70px 40px
+		*
+			font-family: 'boston-ttf'
+
+// bab 1
+@import 'chapter-1'
+// bab 2
+@importa 'chapter-2'
+
